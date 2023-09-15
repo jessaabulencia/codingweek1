@@ -1,0 +1,228 @@
+/* ==Reset CSS== */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ==Reset CSS== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fafafa;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: hsl(229, 6%, 66%);
+  line-height: 1.5;
+}
+
+.wrap {
+  /* max-width: 1440px; */
+  max-width: 1190px;
+  margin: 80px auto 65px;
+  padding: 0 40px;
+}
+
+.h2_ttl {
+  font-size: 2.33em;
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+}
+
+.h2_ttl .h2_sub {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.h2_desc {
+  margin: 18px 0;
+  color: hsl(229, 6%, 66%);
+  text-align: center;
+}
+
+.h3_ttl {
+  font-size: 1.33em;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 10px;
+}
+
+.cols3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 64px 0 0;
+}
+
+._cols {
+  position: relative;
+  width: calc(33.33% - (30px*2) /3);
+  max-width: 350px;
+  min-height: 250px;
+  padding: 27px 33px;
+  background: #fff;
+  box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+}
+
+._cols .ico {
+  position: absolute;
+  margin-top: 10px;
+  right: 32px;
+  bottom: 26px;
+}
+
+._cols:nth-child(2) {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.s_cols {
+  position: relative;
+  max-width: 350px;
+  min-height: 250px;
+  padding: 27px 33px;
+  background: #fff;
+  box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+}
+
+
+.s_cols .ico {
+  position: absolute;
+  right: 32px;
+  bottom: 26px;
+}
+
+.s_cols:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+._cols._supervisor {
+  border-top: hsl(180, 62%, 55%) 4px solid;
+}
+.s_cols._team {
+  border-top: hsl(0, 78%, 62%) 4px solid;
+}
+.s_cols._karma {
+  border-top: hsl(34, 97%, 64%) 4px solid;
+}
+._cols._calc {
+  border-top: hsl(212, 86%, 64%) 4px solid;
+}
+
+.attribution {
+  font-size: 0.73em;
+  text-align: center;
+}
+
+.pc_only {
+  display: block;
+}
+.sp_only {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrap {
+    margin: 85px auto 30px;
+    padding: 0 31px;
+  }
+
+  .h2_ttl {
+    font-size: 1.46em;
+    line-height: 1.6;
+  }
+
+  .h2_ttl .h2_sub {
+    letter-spacing: 1.2px;
+  }
+
+  .h2_desc {
+    line-height: 1.6;
+  }
+
+  .h3_ttl {
+    margin-bottom: 5px;
+  }
+
+  .cols3 {
+    margin: 77px 0 0;
+  }
+
+  ._cols {
+    width: 100%;
+    max-width: 100%;
+    min-height: 222px;
+    margin: 0 0 25px !important;
+  }
+
+  ._cols .ico img {
+    width: 90%;
+  }
+
+  ._cols .ico {
+    right: 23px;
+    bottom: 30px;
+  }
+
+  .s_cols {
+    width: 100%;
+    max-width: 100%;
+    min-height: 222px;
+  }
+  ._cols._supervisor {
+    border-top: hsl(180, 62%, 55%) 3px solid;
+  }
+  .s_cols._team {
+    border-top: hsl(0, 78%, 62%) 3px solid;
+  }
+  .s_cols._karma {
+    border-top: hsl(34, 97%, 64%) 3px solid;
+  }
+  ._cols._calc {
+    border-top: hsl(212, 86%, 64%) 3px solid;
+  }
+
+  .attribution {
+    font-size: 0.66em;
+    margin-bottom: 5px;
+  }
+
+  .pc_only {
+    display: none;
+  }
+  .sp_only {
+    display: block;
+  }
+}
