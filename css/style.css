@@ -33,7 +33,8 @@ table {
 /* ==Reset CSS== */
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -45,100 +46,89 @@ body {
 }
 
 .wrap {
-  /* max-width: 1440px; */
-  max-width: 1190px;
   margin: 80px auto 65px;
   padding: 0 40px;
+  max-width: 1190px;
 }
 
 .h2_ttl {
-  font-size: 2.33em;
+  font-size: 2.43em;
   font-weight: 200;
   color: hsl(234, 12%, 34%);
   text-align: center;
+  line-height: 1.4;
 }
 
 .h2_ttl .h2_sub {
   font-weight: 600;
-  letter-spacing: 1px;
 }
 
-.h2_desc {
+.ttl_desc {
   margin: 18px 0;
   color: hsl(229, 6%, 66%);
   text-align: center;
 }
 
 .h3_ttl {
+  margin-bottom: 10px;
   font-size: 1.33em;
   color: hsl(234, 12%, 34%);
-  margin-bottom: 10px;
 }
 
 .cols3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 64px 0 0;
+  -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+      justify-content: space-between;
+  -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+  margin: 67px 0 0;
 }
 
 ._cols {
-  position: relative;
   width: calc(33.33% - (30px*2) /3);
+}
+
+.card {
+  padding: 27px 33px;
   max-width: 350px;
   min-height: 250px;
-  padding: 27px 33px;
   background: #fff;
-  box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.2);
   border-radius: 7px;
 }
 
-._cols .ico {
-  position: absolute;
-  margin-top: 10px;
-  right: 32px;
-  bottom: 26px;
-}
-
-._cols:nth-child(2) {
-  padding: 0;
-  background: none;
-  box-shadow: none;
-}
-
-.s_cols {
-  position: relative;
-  max-width: 350px;
-  min-height: 250px;
-  padding: 27px 33px;
-  background: #fff;
-  box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 7px;
-}
-
-
-.s_cols .ico {
-  position: absolute;
-  right: 32px;
-  bottom: 26px;
-}
-
-.s_cols:not(:last-child) {
+._cols .card:not(:last-child) {
   margin-bottom: 30px;
 }
 
-._cols._supervisor {
+.card._supervisor {
   border-top: hsl(180, 62%, 55%) 4px solid;
 }
-.s_cols._team {
+.card._team {
   border-top: hsl(0, 78%, 62%) 4px solid;
 }
-.s_cols._karma {
+.card._karma {
   border-top: hsl(34, 97%, 64%) 4px solid;
 }
-._cols._calc {
+.card._calc {
   border-top: hsl(212, 86%, 64%) 4px solid;
+}
+
+.ico {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  margin-top: 38px;
 }
 
 .attribution {
@@ -158,65 +148,60 @@ body {
     margin: 85px auto 30px;
     padding: 0 31px;
   }
-
   .h2_ttl {
-    font-size: 1.46em;
-    line-height: 1.6;
+    font-size: 1.6em;
+    line-height: 1.5;
   }
-
   .h2_ttl .h2_sub {
+    font-size: 0.92em;
     letter-spacing: 1.2px;
   }
-
-  .h2_desc {
+  .ttl_desc {
     line-height: 1.6;
   }
-
   .h3_ttl {
     margin-bottom: 5px;
   }
-
+  .desc {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .ico {
+    margin-top: 33px;
+  }
+  .ico img {
+    width: 55px;
+  }
   .cols3 {
-    margin: 77px 0 0;
+    margin: 75px 0 0;
   }
-
   ._cols {
+    margin: 0 0 25px;
     width: 100%;
-    max-width: 100%;
-    min-height: 222px;
-    margin: 0 0 25px !important;
   }
-
-  ._cols .ico img {
-    width: 90%;
-  }
-
-  ._cols .ico {
-    right: 23px;
-    bottom: 30px;
-  }
-
-  .s_cols {
-    width: 100%;
+  .card {
+    padding: 25px 30px;
     max-width: 100%;
     min-height: 222px;
   }
-  ._cols._supervisor {
-    border-top: hsl(180, 62%, 55%) 3px solid;
+  ._cols .card:not(:last-child) {
+    margin-bottom: 25px;
   }
-  .s_cols._team {
-    border-top: hsl(0, 78%, 62%) 3px solid;
+  .card._supervisor {
+    border-top: hsl(180, 62%, 55%) 2px solid;
   }
-  .s_cols._karma {
-    border-top: hsl(34, 97%, 64%) 3px solid;
+  .card._team {
+    border-top: hsl(0, 78%, 62%) 2px solid;
   }
-  ._cols._calc {
-    border-top: hsl(212, 86%, 64%) 3px solid;
+  .card._karma {
+    border-top: hsl(34, 97%, 64%) 2px solid;
   }
-
+  .card._calc {
+    border-top: hsl(212, 86%, 64%) 2px solid;
+  }
   .attribution {
-    font-size: 0.66em;
     margin-bottom: 5px;
+    font-size: 0.66em;
   }
 
   .pc_only {
